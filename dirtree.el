@@ -121,7 +121,7 @@ With prefix arguement select `dirtree-buffer'"
     (if select
         (select-window win))))
 
-(defun dirtree-buffer (root select)
+(defun dirtree-in-buffer (root select)
   "create tree of `root' directory
 With prefix arguement select `dirtree-buffer'"
   (interactive "DDirectory: \nP")
