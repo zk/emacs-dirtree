@@ -108,8 +108,9 @@ With prefix arguement select `dirtree-buffer'"
             (setq tree atree)))
       (or tree
           (setq tree (tree-mode-insert (dirtree-root-widget root)))))
-    (setq win (get-buffer-window dirtree-buffer))
+    ;; (setq win (get-buffer-window dirtree-buffer))
     (unless win
+      ;;(setq win (get-buffer-window dirtree-buffer))
       (setq win (apply 'windata-display-buffer dirtree-buffer dirtree-windata))
       (select-window win))
     (with-selected-window win
@@ -119,6 +120,23 @@ With prefix arguement select `dirtree-buffer'"
       (recenter 1))
     (if select
         (select-window win))))
+
+(defun dirtree-buffer (root select)
+  "create tree of `root' directory
+With prefix arguement select `dirtree-buffer'"
+  (interactive "DDirectory: \nP")
+  (let ((buffer (get-buffer-create dirtree-buffer))
+        tree win)
+    (with-current-buffer buffer
+      (unless (eq major-mode 'dirtree-mode)
+        (dirtree-mode))
+      (dolist (atree tree-mode-list)
+        (if (string= (widget-get atree :file) root)
+            (setq tree atree)))
+      (or tree
+          (setq tree (tree-mode-insert (dirtree-root-widget root)))))
+    (if select
+        (switch-to-buffer dirtree-buffer))))
 
 (define-derived-mode dirtree-mode tree-mode "Dir-Tree"
   "A mode to display tree of directory"
