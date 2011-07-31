@@ -2,9 +2,9 @@
 
 ## Installation
 
-1 Install deps
-2 download `dirtree.el` to your `emacs.d` directory.
-3 `(require 'dirtree)`
+1. Install deps
+2. download `dirtree.el` to your `emacs.d` directory.
+3. `(require 'dirtree)`
 
 ## Usage
 
