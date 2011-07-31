@@ -6,6 +6,11 @@
 2. download `dirtree.el` to your `emacs.d` directory.
 3. `(require 'dirtree)`
 
+## Requires
+
+* [tree-mode](http://www.emacswiki.org/emacs/tree-mode.el)
+* [windata](http://www.emacswiki.org/emacs/windata.el)
+
 ## Usage
 
 * `M-x dirtree RET`
@@ -22,21 +27,17 @@ Opens dirtree with the root pointing at the current eproject root.
       (dirtree-in-buffer eproject-root t))
 
 
-## Requires
-
-* [tree-mode](http://www.emacswiki.org/emacs/tree-mode.el)
-* [windata](http://www.emacswiki.org/emacs/windata.el)
-
-
 ## License
 
 Copyright (C) 2010 Free Software Foundation, Inc.
 
 Author: Ye Wenbin <wenbinye@gmail.com>
+
 Maintainer: Ye Wenbin <wenbinye@gmail.com>
+
 Created: 09 Jan 2010
+
 Version: 0.01
-Keywords
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
