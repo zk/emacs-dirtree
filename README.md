@@ -29,6 +29,13 @@ Opens dirtree with the root pointing at the current eproject root.
       (dirtree-in-buffer eproject-root t))
 
 
+## Sample screenshots
+
+Text mode: http://i.imgur.com/Tzid4.png
+
+GUI mode: http://i.imm.io/zIGR.png
+
+
 ## License
 
 Copyright (C) 2010 Free Software Foundation, Inc.
